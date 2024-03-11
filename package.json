@@ -15,5 +15,22 @@
     "name": "biaov",
     "email": "biaov@qq.com"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/biaov/mine-npm-demo.git"
+  },
+  "homepage": "https://github.com/biaov/mine-npm-demo",
+  "bugs": {
+    "url": "https://github.com/biaov/mine-npm-demo/issues"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "contributors": [
+    {
+      "name": "biaov",
+      "email": "biaov@qq.com"
+    }
+  ]
 }
