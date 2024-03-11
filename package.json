@@ -1,0 +1,19 @@
+{
+  "name": "mine-npm-demo",
+  "version": "1.0.1",
+  "description": "This is a sample demo about npm",
+  "main": "index.js",
+  "private": false,
+  "scripts": {
+    "start": "npm run dev"
+  },
+  "keywords": [
+    "npm",
+    "demo"
+  ],
+  "author": {
+    "name": "biaov",
+    "email": "biaov@qq.com"
+  },
+  "license": "ISC"
+}
