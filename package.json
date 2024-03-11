@@ -11,6 +11,9 @@
     "npm",
     "demo"
   ],
+  "engines": {
+    "node": ">=20"
+  },
   "author": {
     "name": "biaov",
     "email": "biaov@qq.com"
