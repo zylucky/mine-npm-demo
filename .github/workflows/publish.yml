@@ -19,11 +19,11 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - run: npm install -g npm
       - run: npm ci
-      # - run: npm run build
+      - run: npm run build
       - name: Read package.json
         id: package
         run: echo "::set-output name=version::$(node -p "require('./package.json').version")"
-      # - run: cd dist
+      - run: cd ./dist
       - run: |
           if [[ "${{ steps.package.outputs.version }}" == *"beta"* ]]; then
             echo "Beta version detected. Executing npm command for beta version."
@@ -34,3 +34,4 @@ jobs:
           fi
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
