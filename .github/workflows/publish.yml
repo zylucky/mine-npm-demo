@@ -22,7 +22,7 @@ jobs:
       - run: npm run build
       - name: Read package.json
         id: package
-        run: echo "::set-env name=VERSION::$(node -p "require('./package.json').version")"
+        run: echo "VERSION=$(node -p "require('./package.json').version")" >> $GITHUB_ENV
       - run: cd ./dist
       - run: |
           if [[ "${{ env.VERSION }}" == *"beta"* ]]; then
