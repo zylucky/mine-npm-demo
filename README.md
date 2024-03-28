@@ -7,4 +7,4 @@
 - [x] 自动发布版本
 - [x] 根据不同的版本号发布不同的版本
 
-<img src="https://shields.io/github/v/release/biaov/wordpress.svg?logo=github&label=version" />
+<img src="https://shields.io/github/v/release/biaov/wordpress.svg?logo=github&label=%E7%89%88%E6%9C%AC" />
