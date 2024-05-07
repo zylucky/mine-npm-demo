@@ -4,7 +4,10 @@
   "description": "This is a sample demo about npm",
   "main": "index.js",
   "private": false,
-  "scripts": {},
+  "scripts": {
+    "build": "node scripts/build",
+    "publish": "node scripts/publish"
+  },
   "keywords": [
     "npm",
     "demo"
