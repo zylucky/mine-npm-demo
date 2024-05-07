@@ -20,7 +20,8 @@ jobs:
       - run: npm install -g npm
       - run: npm ci
       - run: npm run build
-      - run: cd dist && npm publish --tag=beta-v2
+      - run: cd dist 
+      - run: npm publish --tag=beta-v2
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
