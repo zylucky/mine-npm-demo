@@ -1,6 +1,5 @@
-import { writeFileSync, existsSync, mkdirSync } from 'fs'
 import { execSync } from 'child_process'
+import pkg from '../package.json'
 
-const version = +new Date()
-execSync(`git tag v${version}`)
-execSync(`git push origin v${version}`)
+execSync(`git tag v${pkg.version}`)
+execSync(`git push origin v${pkg.version}`)
