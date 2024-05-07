@@ -6,7 +6,7 @@
   "private": false,
   "scripts": {
     "build": "node scripts/build",
-    "publish": "node scripts/publish"
+    "tag": "node scripts/tag"
   },
   "keywords": [
     "npm",
