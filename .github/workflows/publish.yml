@@ -24,7 +24,7 @@ jobs:
       - run: npm run build
       - run: cd dist
       - run: |
-          if [ -d "dist" ]; then
+          if [[ -d "dist" ]]; then
             echo "Directory exists"
             npm publish --tag=beta-v2
           else
