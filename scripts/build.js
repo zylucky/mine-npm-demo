@@ -7,4 +7,4 @@ const rootDir = resolve(import.meta.dirname, '../')
   cpSync(resolve(rootDir, name), resolve(rootDir, 'dist', name))
 })
 
-writeFileSync(resolve(rootDir, 'dist/demo.js'), `console.log('npm-demo-demo')`)
+writeFileSync(resolve(rootDir, 'dist/demo2.js'), `console.log('npm-demo-demo')`)
