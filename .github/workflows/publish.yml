@@ -23,7 +23,13 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: |
+          VERSION=$(node -p "require('./package.json').version")
+          echo "${{VERSION}}"
           cd dist
-          npm publish --tag=beta-v2
+          if [[ "${{VERSION}}" == *"beta"* ]]; then
+            npm publish --tag=beta-v2
+          else
+            npm publish
+          fi
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
