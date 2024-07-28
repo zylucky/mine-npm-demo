@@ -24,6 +24,8 @@ jobs:
       - run: npm run build
       - run: |
           # 使用 npm version 命令更新版本号
+          git config user.name "zylucky"
+          git config user.email "zyluckying@163.com"
           npm version patch -m "Bump version to %s"
           # 如果你不想自动创建 Git 标签，可以注释掉上面的命令
           npm publish
