@@ -30,8 +30,7 @@
     "url": "https://github.com/biaov/mine-npm-demo/issues"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "provenance": true
+    "registry": "https://registry.npmjs.org/"
   },
   "contributors": [
     {
