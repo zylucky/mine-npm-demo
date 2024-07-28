@@ -30,7 +30,7 @@ jobs:
           # 如果你不想自动创建 Git 标签，可以注释掉上面的命令
       - name: Push version bump to GitHub
         run: |
-          git push origin HEAD:main
+          git push
       - name: Publish to npmjs
         run: npm publish
         env:
