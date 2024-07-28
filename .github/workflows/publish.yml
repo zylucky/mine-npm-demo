@@ -26,8 +26,6 @@ jobs:
           # 使用 npm version 命令更新版本号
           npm version patch -m "Bump version to %s"
           # 如果你不想自动创建 Git 标签，可以注释掉上面的命令
-          VERSION=$(node -p "require('./package.json').version")
-          echo "New version is $VERSION"
           npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
