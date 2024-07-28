@@ -1,1 +1,1 @@
-console.log('npm-demo')
+console.log('npm-demo-zylucky')
