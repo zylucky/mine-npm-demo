@@ -23,9 +23,11 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: |
-          # 确定版本号，如果需要的话自动增加版本号
+          # 使用 npm version 命令更新版本号
           npm version patch -m "Bump version to %s"
-          # 发布到 npm
+          # 如果你不想自动创建 Git 标签，可以注释掉上面的命令
+          VERSION=$(node -p "require('./package.json').version")
+          echo "New version is $VERSION"
           npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
