@@ -26,12 +26,11 @@ jobs:
           # 使用 npm version 命令更新版本号
           git config user.name "zylucky"
           git config user.email "zyluckying@163.com"
-          npm version patch -m "Bump version to %s"
+          npm version patch -m "chore(release): bump version to %s"
           # 如果你不想自动创建 Git 标签，可以注释掉上面的命令
       - name: Push version bump to GitHub
         run: |
-          # 推送
-          git push
+          git push origin HEAD:main
       - name: Publish to npmjs
         run: npm publish
         env:
