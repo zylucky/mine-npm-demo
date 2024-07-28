@@ -1,5 +1,5 @@
 {
-  "name": "zy-npm-demo",
+  "name": "zylucky-npm-demo",
   "version": "1.0.0",
   "description": "This is a sample demo about npm",
   "main": "index.js",
@@ -23,9 +23,9 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/biaov/mine-npm-demo.git"
+    "url": "git+https://github.com/zylucky/mine-npm-demo.git"
   },
-  "homepage": "https://github.com/biaov/mine-npm-demo",
+  "homepage": "https://github.com/zylucky/mine-npm-demo",
   "bugs": {
     "url": "https://github.com/biaov/mine-npm-demo/issues"
   },
