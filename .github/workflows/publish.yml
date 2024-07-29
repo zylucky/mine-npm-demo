@@ -29,6 +29,8 @@ jobs:
         run: npm run build
       - name: Version bump and create tags
         run: |
+          git config user.name "zylucky"
+          git config user.email "zyluckying@163.com"
           # 使用npm version命令自动增加版本号并创建默认标签
           npm version patch -m "chore(release): bump version to %s"
 
@@ -38,16 +40,6 @@ jobs:
           # 创建自定义格式的git标签
           CUSTOM_TAG="npm-demo-@$VERSION"
           git tag -a "$CUSTOM_TAG" -m "Release $CUSTOM_TAG"
-
-      #     # 推送默认标签和自定义标签到远程仓库
-      #     git push origin HEAD:main
-      #     git push origin --tags
-      # - run: |
-      #     # 使用 npm version 命令更新版本号
-      #     git config user.name "zylucky"
-      #     git config user.email "zyluckying@163.com"
-      #     npm version patch -m "chore(release): bump version to %s"
-      #     # 如果你不想自动创建 Git 标签，可以注释掉上面的命令
       - name: Push version bump to GitHub
         run: |
           git push
