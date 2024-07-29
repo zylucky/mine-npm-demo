@@ -32,14 +32,15 @@ jobs:
           git config user.name "zylucky"
           git config user.email "zyluckying@163.com"
           # 使用npm version命令自动增加版本号并创建默认标签
-          npm version patch -m "chore(release): bump version to %s"
+          # npm version patch -m "chore(release): bump version to %s"
+          npm version patch --no-git-tag-version
 
           # 获取新版本号
           VERSION=$(node -p "require('./package.json').version")
 
           # 创建自定义格式的git标签
-          CUSTOM_TAG="npm-demo-@$VERSION"
-          git tag -a "$CUSTOM_TAG" -m "Release $CUSTOM_TAG"
+          CUSTOM_TAG="npm-demo-zylucky@$VERSION"
+          git tag -a "$CUSTOM_TAG" -m "chore(release) $CUSTOM_TAG"
       - name: Push version bump to GitHub
         run: |
           git push
