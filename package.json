@@ -1,6 +1,6 @@
 {
   "name": "npm-demo-zylucky",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This is a sample demo about npm",
   "main": "index.js",
   "private": false,
