@@ -14,20 +14,40 @@ jobs:
       contents: write
       id-token: write
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: '20.x'
           registry-url: 'https://registry.npmjs.org'
-      - run: npm install -g npm
-      - run: npm ci
-      - run: npm run build
-      - run: |
-          # 使用 npm version 命令更新版本号
-          git config user.name "zylucky"
-          git config user.email "zyluckying@163.com"
+      - name: Install npm
+        run: npm install -g npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Build project
+        run: npm run build
+      - name: Version bump and create tags
+        run: |
+          # 使用npm version命令自动增加版本号并创建默认标签
           npm version patch -m "chore(release): bump version to %s"
-          # 如果你不想自动创建 Git 标签，可以注释掉上面的命令
+
+          # 获取新版本号
+          VERSION=$(node -p "require('./package.json').version")
+
+          # 创建自定义格式的git标签
+          CUSTOM_TAG="npm-demo-@$VERSION"
+          git tag -a "$CUSTOM_TAG" -m "Release $CUSTOM_TAG"
+
+      #     # 推送默认标签和自定义标签到远程仓库
+      #     git push origin HEAD:main
+      #     git push origin --tags
+      # - run: |
+      #     # 使用 npm version 命令更新版本号
+      #     git config user.name "zylucky"
+      #     git config user.email "zyluckying@163.com"
+      #     npm version patch -m "chore(release): bump version to %s"
+      #     # 如果你不想自动创建 Git 标签，可以注释掉上面的命令
       - name: Push version bump to GitHub
         run: |
           git push
