@@ -1,6 +1,6 @@
 {
-  "name": "zylucky-npm-demo",
-  "version": "1.0.5",
+  "name": "npm-demo-zylucky",
+  "version": "1.0.0",
   "description": "This is a sample demo about npm",
   "main": "index.js",
   "private": false,
@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/zylucky/mine-npm-demo",
   "bugs": {
-    "url": "https://github.com/biaov/mine-npm-demo/issues"
+    "url": "https://github.com/zylucky/mine-npm-demo/issues"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"

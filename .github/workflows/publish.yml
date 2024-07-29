@@ -31,6 +31,7 @@ jobs:
       - name: Push version bump to GitHub
         run: |
           git push
+          git push --tags
       - name: Publish to npmjs
         run: npm publish
         env:
